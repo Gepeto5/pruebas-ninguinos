@@ -10,10 +10,15 @@ public class sun : MonoBehaviour {
     public Light Moon;
     float exposure=3.0f;
     
+    //Set the value of exposure
+    void setExposure(float exposure)
+    {
+        RenderSettings.skybox.SetFloat("_Exposure", exposure);
+    }
 
 	// Use this for initialization
 	void Start () {
-        RenderSettings.skybox.SetFloat("_Exposure", 2.0f);
+        setExposure(2.0f);
     }
 	
 	// Update is called once per frame
@@ -38,6 +43,8 @@ public class sun : MonoBehaviour {
             }
         }
         */
+        //baja el sol
+        /*
         if(Sun.transform.position.z >= 200 && Sun.transform.position.z < 325 && Sun.transform.position.y > 0)
         {
             RenderSettings.skybox.SetFloat("_Exposure", 1.5f);
@@ -58,6 +65,7 @@ public class sun : MonoBehaviour {
         {
             RenderSettings.skybox.SetFloat("_Exposure", 0.1f);
         }
+        //sube el sol
         else if (Sun.transform.position.z >= -490 && Sun.transform.position.z < -470 && Sun.transform.position.y > 0)
         {
             RenderSettings.skybox.SetFloat("_Exposure", 0.1f);
@@ -78,6 +86,13 @@ public class sun : MonoBehaviour {
         {
             RenderSettings.skybox.SetFloat("_Exposure", 2.0f);
         }
+        */
+        if(Sun.transform.position.y == 0)
+        {
+            print(Time.deltaTime);
+        }
+
+
         if (Sun.transform.position.y > 0)
         {
             RenderSettings.skybox = skyDay;
