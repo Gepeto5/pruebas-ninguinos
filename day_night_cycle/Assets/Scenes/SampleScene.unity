@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.47721434, g: 0.5298879, b: 0.636578, a: 1}
+  m_IndirectSpecularColor: {r: 0.6737764, g: 0.7655894, b: 0.8837966, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -191,6 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7fae1af22ce2c4e9a5c287596ce34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skyDay: {fileID: 2100000, guid: 514365b55aa599146854a1b177e009be, type: 2}
+  skyNight: {fileID: 2100000, guid: d2ed85def7074a44bad8091be0eed7fc, type: 2}
+  Sun: {fileID: 170076734}
+  Moon: {fileID: 1621516491}
 --- !u!1 &252355106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1d088fe3243cb8a4d9ed580deeb84572,
@@ -205,6 +209,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff7fae1af22ce2c4e9a5c287596ce34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyDay: {fileID: 0}
+  skyNight: {fileID: 0}
+  Sun: {fileID: 0}
+  Moon: {fileID: 0}
+--- !u!114 &252355111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 252355106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9acacec4f64605944a424db4f67a0932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &534669902
@@ -447,6 +466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7fae1af22ce2c4e9a5c287596ce34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skyDay: {fileID: 0}
+  skyNight: {fileID: 0}
+  Sun: {fileID: 0}
+  Moon: {fileID: 0}
 --- !u!1001 &1792002936
 Prefab:
   m_ObjectHideFlags: 0
@@ -498,6 +521,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cd77fcf31b6bbee44bc710c22b2bf103, type: 2}
+    - target: {fileID: 400000, guid: 1d088fe3243cb8a4d9ed580deeb84572, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d088fe3243cb8a4d9ed580deeb84572, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d088fe3243cb8a4d9ed580deeb84572, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d088fe3243cb8a4d9ed580deeb84572, type: 3}
   m_IsPrefabAsset: 0
