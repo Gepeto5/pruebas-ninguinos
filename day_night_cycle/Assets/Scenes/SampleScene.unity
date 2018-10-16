@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.55056864, g: 0.6259449, b: 0.72344, a: 1}
+  m_IndirectSpecularColor: {r: 0.27405912, g: 0.31150523, b: 0.35980874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -187,7 +187,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180417173}
-  - component: {fileID: 180417175}
   - component: {fileID: 180417174}
   m_Layer: 0
   m_Name: Script day_night
@@ -224,21 +223,6 @@ MonoBehaviour:
   skyNight: {fileID: 2100000, guid: d2ed85def7074a44bad8091be0eed7fc, type: 2}
   Sun: {fileID: 170076734}
   Moon: {fileID: 1621516491}
---- !u!114 &180417175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 180417172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7fae1af22ce2c4e9a5c287596ce34d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skyDay: {fileID: 0}
-  skyNight: {fileID: 0}
-  Sun: {fileID: 0}
-  Moon: {fileID: 0}
 --- !u!1 &252355106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1d088fe3243cb8a4d9ed580deeb84572,
