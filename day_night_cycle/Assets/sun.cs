@@ -8,7 +8,7 @@ public class sun : MonoBehaviour {
     public Material skyNight;
     public Light Sun;
     public Light Moon;
-    float exposure=3.0f;
+    float exposure=2.0f;
     
     //Set the value of exposure
     void setExposure(float exposure)
@@ -27,6 +27,18 @@ public class sun : MonoBehaviour {
         Sun.transform.LookAt(Vector3.zero);
         Moon.transform.RotateAround(Vector3.zero, Vector3.right, 2f * Time.deltaTime);
         Moon.transform.LookAt(Vector3.zero);
+        if(Sun.transform.position.y > 0 && Sun.transform.position.z >0 && Sun.transform.position.z <500)
+        {
+            exposure -= 0.00075f;
+            setExposure(exposure);
+        }
+        else if(Sun.transform.position.y > 0 && Sun.transform.position.z < 0 && Sun.transform.position.z > -500)
+        {
+            exposure += 0.00075f;
+            setExposure(exposure);
+        }
+
+
         /*
         if (Sun.transform.position.z >= 0 && Sun.transform.position.y > 0)
         {
@@ -87,10 +99,6 @@ public class sun : MonoBehaviour {
             RenderSettings.skybox.SetFloat("_Exposure", 2.0f);
         }
         */
-        if(Sun.transform.position.y == 0)
-        {
-            print(Time.deltaTime);
-        }
 
 
         if (Sun.transform.position.y > 0)
