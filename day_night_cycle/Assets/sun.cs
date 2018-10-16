@@ -27,6 +27,7 @@ public class sun : MonoBehaviour {
         Sun.transform.LookAt(Vector3.zero);
         Moon.transform.RotateAround(Vector3.zero, Vector3.right, 2f * Time.deltaTime);
         Moon.transform.LookAt(Vector3.zero);
+<<<<<<< HEAD
         if(Sun.transform.position.y > 0 && Sun.transform.position.z >0 && Sun.transform.position.z <500)
         {
             exposure -= 0.00075f;
@@ -41,20 +42,38 @@ public class sun : MonoBehaviour {
 
         /*
         if (Sun.transform.position.z >= 0 && Sun.transform.position.y > 0)
+=======
+        if ((RenderSettings.skybox = skyDay) && (Sun.transform.position.z > 0) && (Sun.transform.position.z < 505) && Sun.transform.position.y > 0)
+>>>>>>> 5801056e8feead2c29ad48ee2bd308f5b4936e83
         {
-            for (float i = exposure; i >= 0.0f; i -= 0.02f)
+            exposure -= 0.00075f;
+            setExposure(exposure);
+        }
+        else if ((RenderSettings.skybox = skyDay) && (Sun.transform.position.z > -499) && (Sun.transform.position.z < 0) && Sun.transform.position.y > 0)
+        {
+            exposure += 0.00075f;
+            setExposure(exposure);
+        }
+
+        if (Sun.transform.position.y < 0)
+        {
+            if (Moon.transform.position.z < -490)
             {
-                RenderSettings.skybox.SetFloat("_Exposure", i);
+                setExposure(0.5f);
+            }
+            else if (Moon.transform.position.z >= -300 && Moon.transform.position.z < 300)
+            {
+                setExposure(2.5f);
+            }
+            else if (Moon.transform.position.z >= 300 && Moon.transform.position.z < 490)
+            {
+                setExposure(0.5f);
             }
         }
-        else if (Sun.transform.position.z <= 0 && Sun.transform.position.y > 0)
-        {
-            for (float i = exposure; i >= 0.0f; i += 0.02f)
-            {
-                RenderSettings.skybox.SetFloat("_Exposure", i);
-            }
-        }
-        */
+        //print(Time.frameCount);
+
+
+       
         //baja el sol
         /*
         if(Sun.transform.position.z >= 200 && Sun.transform.position.z < 325 && Sun.transform.position.y > 0)
@@ -99,6 +118,10 @@ public class sun : MonoBehaviour {
             RenderSettings.skybox.SetFloat("_Exposure", 2.0f);
         }
         */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5801056e8feead2c29ad48ee2bd308f5b4936e83
 
 
         if (Sun.transform.position.y > 0)
